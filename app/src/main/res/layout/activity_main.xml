@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txttopla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="8dp"
+        android:text="Topla"
+        android:textSize="17sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButtonTopla"
+        app:layout_constraintStart_toStartOf="@+id/toggleButtonTopla" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonTopla"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="112dp"
+        android:text="ToggleButton"
+        android:textOff="Aç"
+        android:textOn="Kapa"
+        app:layout_constraintBottom_toBottomOf="@+id/toggleButtoncarp"
+        app:layout_constraintEnd_toStartOf="@+id/toggleButtoncarp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toggleButtoncarp" />
+
+    <TextView
+        android:id="@+id/txtcarp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:layout_marginBottom="8dp"
+        android:text="Çarp"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButtoncarp"
+        app:layout_constraintStart_toStartOf="@+id/toggleButtoncarp" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtoncarp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="90dp"
+        android:text="ToggleButton"
+        android:textOff="Aç"
+        android:textOn="Kapa"
+        app:layout_constraintBottom_toBottomOf="@+id/txtböl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/toggleButtonTopla"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtcıkar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="22dp"
+        android:text="Çıkarma"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButtoncıkar"
+        app:layout_constraintStart_toStartOf="@+id/toggleButtoncıkar" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtoncıkar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="68dp"
+        android:text="ToggleButton"
+        android:textOff="Aç"
+        android:textOn="Kapa"
+        app:layout_constraintBottom_toTopOf="@+id/txtsoru"
+        app:layout_constraintEnd_toStartOf="@+id/toggleButtonböl"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtböl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="22dp"
+        android:text="bölme "
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/toggleButtonböl"
+        app:layout_constraintStart_toStartOf="@+id/toggleButtonböl" />
+
+    <ToggleButton
+        android:id="@+id/toggleButtonböl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="68dp"
+        android:text="ToggleButton"
+        android:textOff="Aç"
+        android:textOn="Kapa"
+        app:layout_constraintBottom_toTopOf="@+id/txtsoru"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/toggleButtoncıkar" />
+
+    <TextView
+        android:id="@+id/txtsoru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="47dp"
+        android:text="soru"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/edittxttahmin"
+        app:layout_constraintEnd_toStartOf="@+id/toggleButtonböl" />
+
+    <EditText
+        android:id="@+id/edittxttahmin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="57dp"
+        android:ems="10"
+        android:hint="tahmin değerini giriniz"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/buttonsorugetir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonsorugetir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="48dp"
+        android:onClick="btnClick"
+        android:text="soru getir"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttontahmin"
+        app:layout_constraintEnd_toStartOf="@+id/buttontahmin"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttontahmin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="144dp"
+        android:onClick="thmnClick"
+        android:text="tahminde bulun"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
